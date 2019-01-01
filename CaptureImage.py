@@ -5,7 +5,7 @@
 # 使用 pyinstaller 对程序打包时，发现生成的 .exe 比较大，以为可能是导入了一下不必要的库
 # 所在在本程序中不是简单的 import cv2 而是只将必要的函数 import 进来，但还是发现打包生成的 exe 体积庞大，原因未知
 
-from cv2 import VideoCapture,resize,imshow,waitKey
+from cv2 import VideoCapture,resize,imshow,waitKey,destroyAllWindows
 import numpy as np
 
 cap = VideoCapture(0) # 打开默认摄像头
@@ -27,4 +27,4 @@ while(1):
         print('====================='+str(count)+'.png======================')
         count += 1
 cap.release()
-cv2.destroyAllWindows()
+destroyAllWindows()
