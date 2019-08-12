@@ -8,11 +8,11 @@ int main()
 {
     int n, k;
     cin >> n >> k;
-    // 使用long long的原因是可能会超出int的表示范围，而long字节数不确定，long long确定是64位的
+    // 使用long long的原因是可能会超出int的表示范围,而long字节数不确定,long long确定是64位的
 	LLong count = 0;
     if(k == 0)
     {
-        // 牛客网不支持在这里写成 long long(n) ，所以 typedef 一下
+        // 牛客网不支持在这里写成 long long(n) ,所以 typedef 一下
 		count = LLong(n) * LLong(n);
         cout << count;
         return 0;
